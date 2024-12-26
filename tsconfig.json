@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // More modern than es6
+    "module": "commonjs",
+    "lib": ["es2020", "dom"],
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true, // Recommended with strict mode
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["node", "express"], // Added express types
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src", // Changed to src for cleaner imports
+    "paths": {
+      "@/*": ["*"], // Allows '@/components' style imports
+      "@types/*": ["types/*"]
+    },
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowUnreachableCode": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src/**/*", "src/**/*.ts"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+}
